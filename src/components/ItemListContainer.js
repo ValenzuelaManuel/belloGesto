@@ -1,9 +1,8 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 
-function ItemListContainer () {
+export default function ItemListContainer () {
     return (
-        <h2>Listado de productos disponibles</h2>
+        <ItemCount initial={1} stockInicial={5} />
     )
 }
-
-export default ItemListContainer
