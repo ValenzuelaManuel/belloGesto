@@ -7,7 +7,7 @@ export default function App({props}) {
   return (
     <div>
       <NavBar/>
-      <h1>PropProp</h1>
+      <h1>Tienda</h1>
       <span>{props}</span>
       <ItemListContainer items={productos}/>
     </div>
