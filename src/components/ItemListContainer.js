@@ -1,8 +1,16 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 
-export default function ItemListContainer () {
-    return (
-        <ItemCount initial={1} stockInicial={5} />
-    )
+export default function ItemListContainer (props) {
+    const {items} = props;
+    
+    return <div>
+        {items.map((productoUnitario) => {
+      return(
+        <li>
+          {productoUnitario}
+        </li>
+      )
+    })}
+    </div>
 }
