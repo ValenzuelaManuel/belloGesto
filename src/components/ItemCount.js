@@ -20,7 +20,6 @@ const ItemCount = ({initial, stockInicial }) => {
       };
     return (
         <div style={{ display: "block", padding: 30 }}>
-        <h2>Agregar productos al carrito</h2>
         <div>
         <Badge color="secondary" badgeContent={qty}>
           <ShoppingCartIcon />{" "}
@@ -57,37 +56,3 @@ const ItemCount = ({initial, stockInicial }) => {
   };
   
   export default ItemCount;
-  
-/* const ItemCount = ()
-function ItemCount() {
-  const [itemCount, setItemCount, onAdd] = React.useState(0);
-  return (
-    <div style={{ display: "block", padding: 30 }}>
-      <h2>Agregar producto al carrito</h2>
-      <div>
-        <Badge color="secondary" badgeContent={itemCount}>
-          <ShoppingCartIcon />{" "}
-        </Badge>
-        <ButtonGroup>
-          <Button
-            onClick={() => {
-              setItemCount(Math.max(itemCount - 1, 0));
-            }}
-          >
-            {" "}
-            <RemoveIcon fontSize="small" />
-          </Button>
-          <Button
-            onClick={() => {
-              setItemCount(itemCount + 1);
-            }}
-          >
-            {" "}
-            <AddIcon fontSize="small" />
-          </Button>
-        </ButtonGroup>
-      </div>
-    </div>
-
-  );
-} */
