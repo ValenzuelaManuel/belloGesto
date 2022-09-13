@@ -1,15 +1,21 @@
+import { responsiveFontSizes } from "@mui/material";
 import React from "react";
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
+import { getProductos} from "./Promesa"
+import { useState } from 'react';
 
 const ItemListContainer = () => {
-    const productos = [
-        {"id":1 , "nombre": "Aros verdes" , "imagen" : "arosverdes.png" , "descripcion": "Colección Primavera 2022" , "precio": 15000 , "stock" : 4},
-        {"id":2 , "nombre": "Collar azul" , "imagen" : "collarazul.png" , "descripcion": "Colección Primavera 2022" , "precio": 18000 , "stock" : 5},
-    ];
+    const [items, setItems] = useState([])
+
+    getProductos()
+    .then((response) => {
+        console.log(response)
+        setItems(response)
+    })
     return (
         <div className="container">
-        <ItemList items={productos}/>
+        <ItemList items={items}/>
     </div>
     )
 }
